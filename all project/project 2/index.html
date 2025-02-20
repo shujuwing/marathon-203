@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+   <div class="tab-wrapper">
+
+    <div class="tabs-list">
+        <div class="tab-trigger active" data-target="account">Account</div>
+        <div class="tab-trigger"        data-target="password">Password</div>
+    </div>
+
+    <div class="tab-content active" id="account">
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Account</div>
+                <div class="card-description">
+                    Make changes to your account here. Click save when you're done.
+                </div>
+            </div>
+            <div class="card-content">
+
+                <div class="input-group">
+                    <label for="name" class="label">Name</label>
+                    <input id="name" type="text" class="input">
+                </div>
+
+                <div class="input-group">
+                    <label for="username" class="label">Username</label>
+                    <input id="username" type="text" class="input">
+                </div>
+
+            </div>
+            <div class="card-footer">
+                <button class="button">Save changes</button>
+            </div>
+        </div>
+    </div>
+    
+    <div class="tab-content" id="password">
+
+        <div class="card">
+            <div class="card-header">
+                <div class="card-title">Password</div>
+                <div class="card-description">
+                    Change your password here. After saving, you'll be logged out.
+                </div>
+            </div>
+
+
+            <div class="card-content">
+
+                <div class="input-group">
+                    <label for="current" class="label">Current password</label>
+                    <input id="current" type="password" class="input">
+                </div>
+                <div class="input-group">
+                    <label for="new" class="label">New password</label>
+                    <input id="new" type="password" class="input">
+                </div>
+
+
+            </div>
+            <div class="card-footer">
+                <button class="button">Save password</button>
+            </div>
+        </div>
+    </div>
+
+
+   </div>
+
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>

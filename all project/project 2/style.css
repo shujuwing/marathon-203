@@ -1,0 +1,90 @@
+
+body{
+    background-color: #00040e;
+}
+
+.tab-wrapper{
+
+    width: 800px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.tabs-list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    
+}
+
+.tab-trigger {
+    cursor: pointer;
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+
+.tab-trigger.active {
+    background-color: #00040e;
+    color: ghostwhite;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.card {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    color: ghostwhite;
+}
+
+.card-header {
+    margin-bottom: 10px;
+}
+
+.card-footer {
+    margin-top: 10px;
+}
+
+.card-title {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.card-description {
+    font-size: 14px;
+    color: #666;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+.label {
+    display: block;
+    font-weight: bold;
+}
+
+.input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 4px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #ffffff;
+    color: #000000;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}

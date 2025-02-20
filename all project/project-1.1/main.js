@@ -5,7 +5,7 @@ const modal = document.getElementById("myModal");
 const btn = document.getElementById("openModalBtn");
 
 
-const span = document.getElementsByClassName("close")[0];
+const closebtn = document.getElementsByClassName("close");
 
 
 btn.onclick = function() {
@@ -13,7 +13,7 @@ btn.onclick = function() {
 }
 
 
-span.onclick = function() {
+closebtn.onclick = function() {
     modal.style.display = "none";
 }
 
