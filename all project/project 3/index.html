@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        body{
+            background-color: rgb(245, 229, 229);
+        }
+
+        #posts-container{
+            max-width: 85rem;
+            width: 95%;
+            margin-inline: auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr 1fr;
+            
+        }
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            padding: 16px;
+            margin: 16px;
+            max-width: 400px;
+            
+        }
+        .card-title {
+            font-size: 1.5em;
+            margin-bottom: 8px;
+        }
+        .card-body {
+            font-size: 1em;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+     <div id="posts-container">
+
+     </div>
+
+    <script>
+        const postApi = "https://dummyjson.com/posts";
+
+        fetch(postApi)
+            .then(response => response.json())
+            .then(data => {
+                const postsContainer = document.getElementById('posts-container');
+                for (let i = 0; i < data.posts.length; i++) {
+                    const card = createCard(data.posts[i]);
+                    postsContainer.appendChild(card);
+                }
+            })
+
+        function createCard(post) {
+            const card = document.createElement('div');
+            card.className = 'card';
+
+            const cardTitle = document.createElement('h2');
+            cardTitle.className = 'card-title';
+            cardTitle.textContent = post.title;
+
+            const cardBody = document.createElement('p');
+            cardBody.className = 'card-body';
+            cardBody.textContent = post.body;
+
+            const cardTag = document.createElement('p');
+            cardTag.className = 'card-tag';
+            cardTag.textContent = post.tags;
+
+            const cardReaction = document.createElement('p');
+            cardReaction.className = 'card-reaction';
+            cardReaction.textContent = post.reactions;
+
+            card.appendChild(cardTitle);
+            card.appendChild(cardBody);
+            card.appendChild(cardTag);
+            card.appendChild(cardReaction);
+
+            return card;
+        }
+
+       
+          
+    </script>
+</body>
+</html>
